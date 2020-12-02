@@ -1,0 +1,5 @@
+spring:
+  security:
+    user:
+      name: "${ADMIN_USERNAME:admin}"
+      password: "${ADMIN_PASSWORD:password}"
