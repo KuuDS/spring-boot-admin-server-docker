@@ -2,6 +2,7 @@ package me.kuuds.monitor;
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -13,6 +14,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import java.util.UUID;
 
+@Profile("secured")
 @Configuration(proxyBeanMethods = false)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 

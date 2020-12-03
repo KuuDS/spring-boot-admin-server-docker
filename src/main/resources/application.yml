@@ -1,4 +1,19 @@
+---
 spring:
+  application:
+    name: spring-boot-admin-server
+  profiles:
+    active:
+      - ${SECURE_PROFILE:insecure}
+---
+spring:
+  profiles: insecure
+
+info.tags.security: insecure
+
+---
+spring:
+  profiles: secured
   security:
     user:
       name: "${ADMIN_USERNAME:admin}"
